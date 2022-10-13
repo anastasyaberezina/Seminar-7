@@ -1,17 +1,17 @@
 ﻿// Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
 
-int rows = new Random().Next(7, 7);
-int columns = new Random().Next(7, 7);
+int m = new Random().Next(7, 7);
+int n = new Random().Next(7, 7);
 
-int[,] array = GetArray(rows, columns, -99, 99);
+int[,] array = GetArray(m, n, -99, 99);
 PrintArray(array);
 
-int[,] GetArray(int rows, int columns, int minValue, int maxValue) 
+int[,] GetArray(int m, int n, int minValue, int maxValue) 
 {
-    int[,] result = new int[rows, columns];
-    for(int i=0; i<rows; i++)
+    int[,] result = new int[m, n];
+    for(int i=0; i<m; i++)
     {
-        for(int j=0; j<columns; j++)
+        for(int j=0; j<n; j++)
         {
             result[i,j]=new Random().Next(minValue, maxValue+1);
         }
